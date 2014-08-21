@@ -25,29 +25,50 @@ a {
 .map-container {
 	padding:0;
 	height:100%;
+	width:75%;
+	float:left;
 }
 
 .shelf-container {
 	height:100%;
 	padding:0;
+	width:25%;
+	float:right;
+	overflow: scroll;
+}
+
+::-webkit-scrollbar {
+	display:none;
 }
 
 #shelf {
 	background-color:lightgray;
 	height:100%;
 	width:100%;
-	padding:10px;
+	padding:30px;
 }
 
 .row {
 	height:100%;
+	max-width:100%;
+	margin:0;
+}
+
+.options-inner {
+	padding: 10px 25px 25px 25px;
+	background: #eee;
+	border-radius: 5px;
+}
+
+.options-inner h5 {
+	margin:20px 0 3px 0;
 }
 
 .itinerary-inner {
-	/*margin:10px;*/
-	padding: 25px;
+	padding: 10px 25px 25px 25px;
 	background: #eee;
 	border-radius: 5px;
+	margin-top: 20px;
 }
 
 .navbar-pad {
@@ -57,4 +78,12 @@ a {
 select {
 	margin-right:10px;
 	width: 80%;
+}
+
+.btn-xs {
+	border-radius:20px;
+}
+
+.itinerary-inner li {
+	font-size: 12px;
 }

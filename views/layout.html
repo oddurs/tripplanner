@@ -58,34 +58,7 @@
       <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfQxgWt-LSZcEmTEN8581Uq9SzZHnpuys&sensor=true"></script>
       <script type="text/javascript" src="/javascripts/googlemaps.js"></script>
-      <script>
-      $(document).ready(function() {
-        for(i in all_hotels) {
-          for(key in all_hotels[i]) {
-            if(key === "name") {
-              var option = "<option>" + all_hotels[i][key] + "</option>";
-              $('#hotel-dropdown').append(option);
-            }
-          }
-        }
-        for(i in all_restaurants) {
-          for(key in all_restaurants[i]) {
-            if(key === "name") {
-              var option = "<option>" + all_restaurants[i][key] + "</option>";
-              $('#restaurant-dropdown').append(option);
-            }
-          }
-        }
-        for(i in all_things_to_do) {
-          for(key in all_things_to_do[i]) {
-            if(key === "name") {
-              var option = "<option>" + all_things_to_do[i][key] + "</option>";
-              $('#thingsToDo-dropdown').append(option);
-            }
-          }
-        }
-      })
-      </script>
+      <script type="text/javascript" src="/javascripts/accessData.js"></script>
       <script type="text/javascript" src="/javascripts/adder.js"></script>
     </body>
     </html>

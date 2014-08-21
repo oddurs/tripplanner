@@ -1,14 +1,36 @@
 $(document).ready(function() {
 	$('#hotel-button').click(function() {
-		var newToDo = $('#hotel-dropdown option:selected').text();
-		$('.itinerary-hotel ul').append('<li>' + newToDo + '</li>');
+		var newHotel = $('#hotel-dropdown option:selected');
+		$('.itinerary-hotel ul').append('<li>' + newHotel.text() + '</li>');
+		$('.itinerary-hotel').css('display', 'block');
+		placeAPin(newHotel.val(), all_hotels);
 	})
 	$('#restaurant-button').click(function() {
-		var newToDo = $('#restaurant-dropdown option:selected').text();
-		$('.itinerary-restaurant ul').append('<li>' + newToDo + '</li>');
+		var newRestaurant = $('#restaurant-dropdown option:selected');
+		$('.itinerary-restaurant ul').append('<li>' + newRestaurant.text() + '</li>');
+		$('.itinerary-restaurant').css('display', 'block');
+		placeAPin(newRestaurant.val(), all_restaurants);
 	})
 	$('#todo-button').click(function() {
-		var newToDo = $('#thingsToDo-dropdown option:selected').text();
-		$('.itinerary-todo ul').append('<li>' + newToDo + '</li>');
+		var newToDo = $('#thingsToDo-dropdown option:selected');
+		$('.itinerary-todo ul').append('<li>' + newToDo.text() + '</li>');
+		$('.itinerary-todo').css('display', 'block');
+		placeAPin(newToDo.val(), all_things_to_do);
 	})
 })
+
+function placeAPin(thingID, catalog) {
+	var name,
+		locationLat,
+		locationLong;
+
+	for(var i in catalog) {
+		if(catalog[i]._id === thingID) {
+		  locationLat = catalog[i].place[0].location[0];
+		  locationLong = catalog[i].place[0].location[1];
+		  name = catalog[i].name;
+		}
+	}
+
+	console.log(name, locationLat, locationLong);
+}

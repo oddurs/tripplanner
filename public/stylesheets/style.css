@@ -87,3 +87,13 @@ select {
 .itinerary-inner li {
 	font-size: 12px;
 }
+
+.itinerary-hotel {
+	display: none;
+}
+.itinerary-restaurant {
+	display: none;
+}
+.itinerary-todo {
+	display: none;
+}

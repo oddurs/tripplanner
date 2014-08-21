@@ -25,9 +25,9 @@ app.use(cookieParser());
 
 app.use(
   sass.middleware({
-    src: __dirname + '/assets', //where the sass files are
-    dest: __dirname + '/public', //where css should go
-    // includePaths: __dirname + '/assets/stylesheets',
+    src: __dirname + '/assets/stylesheets', //where the sass files are
+    dest: __dirname + '/public/stylesheets', //where css should go
+    includePaths: __dirname + '/assets/stylesheets',
     debug: true // obvious
   })
 );

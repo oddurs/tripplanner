@@ -1,88 +1,36 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="col-lg-9">
-	<div id="map-canvas"></div>
-</div>
-<div class="col-lg-3">
-	<div id="itinerary-shelf"></div>
-</div>
-
-<!-- <div class="row upper-row">
-	<div class="col-lg-3">
-		<div class="btn-group">
-		  <button type="button" class="btn btn-sm btn-default">Day 1</button>
-		  <button type="button" class="btn btn-sm btn-default">Day 2</button>
-		  <button type="button" class="btn btn-sm btn-default">Day 3</button>
+	<div class="row">
+		<div class="col-lg-9 map-container">
+			<div id="map-canvas"></div>
 		</div>
-		<button class="btn btn-sm btn-default">+ Add Day</button>
-	</div>
-	<div class="col-lg-9">
-		<div class="col-lg-4">
-			<h3 class="categoryTitle">Hotels</h3>
-				<div class="btn-group">
-				  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-				    Action <span class="caret"></span>
-				  </button>
-				  <ul class="dropdown-menu" role="menu">
-				    <li><a href="#">Action</a></li>
-				    <li><a href="#">Another action</a></li>
-				    <li><a href="#">Something else here</a></li>
-				    <li class="divider"></li>
-				    <li><a href="#">Separated link</a></li>
-				  </ul>
+		<div class="col-lg-3 shelf-container">
+			<div id="shelf">
+				<div class="itinerary-inner">
+					<h5>HOTELS</h5>
+					<select>
+						{% for hotel in hotels %}
+						<option>{{hotel.name}}</option>
+						{% endfor %}
+					</select>
+					<h5>RESTAURANTS</h5>
+					<select>
+						{% for restaurant in restaurants %}
+						<option>{{restaurant.name}}</option>
+						{% endfor %}
+					</select>
+					<h5>THINGS TO DO</h5>
+					<select>
+						{% for thingToDo in thingsToDo %}
+						<option>{{thingToDo.name}}</option>
+						{% endfor %}
+					</select>
 				</div>
-
-
-				<select>
-				  <option value="volvo">Hotel Andaaz</option>
-				  <option value="saab">Saab</option>
-				  <option value="mercedes">Mercedes</option>
-				  <option value="audi">Audi</option>
-				</select>
-			<button class="btn btn-default">Add</button>
-		</div>
-		<div class="col-lg-4">
-			<h3 class="categoryTitle">Things To Do</h3>
-				<select>
-				  <option value="volvo">Hotel Andaaz</option>
-				  <option value="saab">Saab</option>
-				  <option value="mercedes">Mercedes</option>
-				  <option value="audi">Audi</option>
-				</select>
-			<button class="btn btn-default">Add</button>
-		</div>
-		<div class="col-lg-4">
-			<h3 class="categoryTitle">Restaurants</h3>
-				<select>
-				  <option value="volvo">Hotel Andaaz</option>
-				  <option value="saab">Saab</option>
-				  <option value="mercedes">Mercedes</option>
-				  <option value="audi">Audi</option>
-				</select>
-			<button class="btn btn-default">Add</button>
+			</div>
 		</div>
 	</div>
-</div>
-<div class="row">
-	<div class="col-lg-3">
-		<h3>Plan for Day 1</h3>
-		<ul>
-			<li>
-				<h4>Hotel</h4>
-				<h5>Hotel Andaaz</h5>
-			</li>
-			<li>
-				<h4>Things To Do</h4>
-				<h5>Statue of Liberty <br> Wall Street Bull <br> South Street Seaport</h5>
-			</li>
-			<li>
-				<h4>Restaurants</h4>
-				<h5>Taco Bell <br> Papa Johns</h5>
-			</li>
-		</ul>
-	</div>
-</div> -->
+
 
 <script>
  

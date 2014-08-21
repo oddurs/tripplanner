@@ -1,6 +1,6 @@
 body {
 	box-sizing:border-box;
-  	padding: 50px 0;
+  	padding: 50px 0 0 0;
   	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
@@ -18,15 +18,37 @@ a {
 
 #map-canvas {
 	width:100%;
-	height:650px;
+	height:100%;
+	padding:0;
 }
 
-.col-lg-9 {
-	padding-left:0;
+.map-container {
+	padding:0;
+	height:100%;
 }
 
-#itinerary-shelf {
-	background-image:url(/brushed1.jpg);
-	height:650px;
+.shelf-container {
+	height:100%;
+	padding:0;
 }
 
+#shelf {
+	background-color:lightgray;
+	height:100%;
+	width:100%;
+	padding:0;
+}
+
+.row {
+	height:100%;
+}
+
+.itinerary-inner {
+	padding: 25px;
+	background: #eee;
+	border-radius: 5px;
+}
+
+.navbar-pad {
+	padding:0 40px;
+}

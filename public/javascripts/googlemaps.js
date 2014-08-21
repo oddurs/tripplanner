@@ -1,3 +1,7 @@
+$(window).resize(function() {
+  $('.row').css('height', ($(window).height() - 50));
+});
+
 function initialize_gmaps() {
  
   // initialize new google maps LatLng object
@@ -28,5 +32,6 @@ function initialize_gmaps() {
 }
  
 $(document).ready(function() {
+  $('.row').css('height', ($(window).height() - 50));
   initialize_gmaps();
 }); 

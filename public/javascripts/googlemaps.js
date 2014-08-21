@@ -5,6 +5,7 @@ function initialize_gmaps() {
  
   // set the map options hash
   var mapOptions = {
+    scrollwheel:false,
     center: myLatlng,
     zoom: 16,
     mapTypeId: google.maps.MapTypeId.ROADMAP

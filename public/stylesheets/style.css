@@ -21,3 +21,12 @@ a {
 	height:650px;
 }
 
+.col-lg-9 {
+	padding-left:0;
+}
+
+#itinerary-shelf {
+	background-image:url(/brushed1.jpg);
+	height:650px;
+}
+

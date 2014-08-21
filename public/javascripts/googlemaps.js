@@ -2,6 +2,8 @@ $(window).resize(function() {
   $('.row').css('height', ($(window).height() - 50));
 });
 
+var map;
+
 function initialize_gmaps() {
  
   // initialize new google maps LatLng object
@@ -19,7 +21,7 @@ function initialize_gmaps() {
   var map_canvas_obj = document.getElementById("map-canvas");
  
   // initialize a new Google Map with the options
-  var map = new google.maps.Map(map_canvas_obj, mapOptions);
+  map = new google.maps.Map(map_canvas_obj, mapOptions);
  
   // Add the marker to the map
   var marker = new google.maps.Marker({

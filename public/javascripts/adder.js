@@ -24,6 +24,7 @@ function placeAPin(thingID, catalog) {
 		locationLat,
 		locationLong;
 
+
 	for(var i in catalog) {
 		if(catalog[i]._id === thingID) {
 		  locationLat = catalog[i].place[0].location[0];
@@ -32,5 +33,13 @@ function placeAPin(thingID, catalog) {
 		}
 	}
 
-	console.log(name, locationLat, locationLong);
+	console.log(google.maps.Latlng);
+
+	var myLatLng = new google.maps.LatLng(locationLat, locationLong);
+	var marker = new google.maps.Marker({
+	    position: myLatLng,
+	    title:name
+	});
+
+	marker.setMap(map);
 }

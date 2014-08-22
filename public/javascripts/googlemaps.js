@@ -7,13 +7,13 @@ var map;
 function initialize_gmaps() {
  
   // initialize new google maps LatLng object
-  var myLatlng = new google.maps.LatLng(40.705786,-74.007672);
+  var myLatlng = new google.maps.LatLng(40.722319, -73.996525);
  
   // set the map options hash
   var mapOptions = {
     scrollwheel:false,
     center:myLatlng,
-    zoom: 16,
+    zoom: 13,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
  
@@ -28,7 +28,7 @@ function initialize_gmaps() {
     position: myLatlng,
     title:"Hello World!"
   });
- 
+
   // Add the marker to the map by calling setMap()
   marker.setMap(map);
 }

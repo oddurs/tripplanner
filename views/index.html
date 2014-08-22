@@ -52,6 +52,32 @@ var all_hotels = {{ hotels | json }};
 var all_restaurants = {{ restaurants | json }};
 var all_things_to_do = {{ thingsToDo | json }};
 {% endautoescape %}
+
+var day1 = {
+	hotels:[],
+	restaurants:[],
+	things_to_do:[]
+};
+
+var day2 = {
+	hotels:[],
+	restaurants:[],
+	things_to_do:[]
+};
+
+var day3 = {
+	hotels:[],
+	restaurants:[],
+	things_to_do:[]
+};
+
+var day4 = {
+	hotels:[],
+	restaurants:[],
+	things_to_do:[]
+};
+
+var activeDay = day1;
  
 </script>
 

@@ -109,18 +109,6 @@ select {
 	display: none;
 }
 
-.delete-button {
-	width: 14px;
-	height: 14px;
-	float:right;
-	visibility:hidden;
-
-	.glyphicon-minus {
-		top: -3px;
-		left: -6px;
-	}
-}
-
 .dayButton {
 	background-color: #444;
 	width: 30px;

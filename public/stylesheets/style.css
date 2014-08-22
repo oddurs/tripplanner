@@ -88,6 +88,15 @@ select {
 	font-size: 12px;
 }
 
+#itinerary-scroll {
+	overflow:scroll;
+	max-width:210px;
+	max-height:265px;
+	background-color:#ddd;
+	padding:0 10px 0 10px;
+	border-radius:5px;
+}
+
 .itinerary-hotel {
 	display: none;
 }
@@ -96,4 +105,21 @@ select {
 }
 .itinerary-todo {
 	display: none;
+}
+
+.dayButton {
+	background-color: #444;
+	width: 30px;
+	height: 30px;
+	border-radius: 100%;
+	margin: 5px;
+	color: white;
+	padding: 8px 5px 5px 11px;
+	margin-top: 9px;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.dayButton.active {
+	background-color: #777;
 }

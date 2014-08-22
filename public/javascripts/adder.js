@@ -3,18 +3,21 @@ $(document).ready(function() {
 		var newHotel = $('#hotel-dropdown option:selected');
 		$('.itinerary-hotel ul').append('<li>' + newHotel.text() + '</li>');
 		$('.itinerary-hotel').css('display', 'block');
+		$('#itinerary-scroll').css('border', '1px solid #bbb');
 		placeAPin(newHotel.val(), all_hotels);
 	})
 	$('#restaurant-button').click(function() {
 		var newRestaurant = $('#restaurant-dropdown option:selected');
 		$('.itinerary-restaurant ul').append('<li>' + newRestaurant.text() + '</li>');
 		$('.itinerary-restaurant').css('display', 'block');
+		$('#itinerary-scroll').css('border', '1px solid #bbb');
 		placeAPin(newRestaurant.val(), all_restaurants);
 	})
 	$('#todo-button').click(function() {
 		var newToDo = $('#thingsToDo-dropdown option:selected');
 		$('.itinerary-todo ul').append('<li>' + newToDo.text() + '</li>');
 		$('.itinerary-todo').css('display', 'block');
+		$('#itinerary-scroll').css('border', '1px solid #bbb');
 		placeAPin(newToDo.val(), all_things_to_do);
 	})
 })

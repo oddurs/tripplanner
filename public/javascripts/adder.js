@@ -48,15 +48,6 @@ function placeAPin(thingID, catalog) {
 	marker.setMap(map);
 }
 
-$('.delete-button').hover(
-	function() {
-		$(this).show();
-	},
-	function() {
-		$(this).hide();
-	}
-);
-
-$('#itinerary-scroll ul li').on('hover', 'button', function() {
-	$('.delete-button').css('visibility', 'visible');
-});
+$(document).on('click', '.delete-button', function () {
+	$(this).closest('li').fadeOut(300);
+})

@@ -5,7 +5,7 @@ $('#addDayButton').click(function() {
 	}
 });
 
-$('#daysCounter').on('click', 'li', (function() {
+$(document).on('click', '.dayButton', (function() {
 	if($(this).attr('id') != 'addDayButton') {
 		$('.dayButton').addClass('dayButton');
 		$('.dayButton').removeClass('active');
@@ -25,7 +25,7 @@ var changePage = function(activeDay) {
 		for(var i in activeDay.hotels) {
 			for(var j=0; j<all_hotels.length; j++) {
 				if(all_hotels[j]._id === activeDay.hotels[i]) {
-					$('.itinerary-hotel ul').append('<li>' + all_hotels[j].name + '</li>');
+					$('.itinerary-hotel ul').append('<li>' + all_hotels[j].name + '<button class="btn btn-xs btn-danger delete-button"><span class="glyphicon glyphicon-minus"></span></button>' + '</li>');
 					placeAPin(activeDay.hotels[i], all_hotels);
 				}
 			}
@@ -33,7 +33,7 @@ var changePage = function(activeDay) {
 		for(var i in activeDay.restaurants) {
 			for(var j=0; j<all_restaurants.length; j++) {
 				if(all_restaurants[j]._id === activeDay.restaurants[i]) {
-					$('.itinerary-restaurant ul').append('<li>' + all_restaurants[j].name + '</li>');
+					$('.itinerary-restaurant ul').append('<li>' + all_restaurants[j].name + '<button class="btn btn-xs btn-danger delete-button"><span class="glyphicon glyphicon-minus"></span></button>' + '</li>');
 					placeAPin(activeDay.restaurants[i], all_restaurants);
 				}
 			}
@@ -41,7 +41,7 @@ var changePage = function(activeDay) {
 		for(var i in activeDay.things_to_do) {
 			for(var j=0; j<all_things_to_do.length; j++) {
 				if(all_things_to_do[j]._id === activeDay.things_to_do[i]) {
-					$('.itinerary-todo ul').append('<li>' + all_things_to_do[j].name + '</li>');
+					$('.itinerary-todo ul').append('<li>' + all_things_to_do[j].name + '<button class="btn btn-xs btn-danger delete-button"><span class="glyphicon glyphicon-minus"></span></button>' + '</li>');
 					placeAPin(activeDay.things_to_do[i], all_things_to_do);
 				}
 			}

@@ -6,6 +6,16 @@ body {
 a {
   color: #00B7FF; }
 
+.navbar-inverse {
+  background: #736357;
+  border-color: #564a41; }
+
+.navbar-inverse .navbar-nav > .active > a {
+  background: #564a41; }
+
+.navbar-brand {
+  padding: 10px 14px; }
+
 .upper-row {
   margin-top: 15px; }
 
@@ -28,14 +38,12 @@ a {
   padding: 0;
   width: 25%;
   float: right;
-  overflow: scroll;
-  background: lightgray; }
+  overflow: scroll; }
 
 ::-webkit-scrollbar {
   display: none; }
 
 #shelf {
-  background-color: lightgray;
   height: 100%;
   width: 100%;
   padding: 30px; }
@@ -44,7 +52,7 @@ a {
   height: 100vh;
   max-width: 100%;
   margin: 0;
-  background: lightgray; }
+  background: #A8C9DD; }
 
 .options-inner {
   padding: 10px 25px 25px 25px;
@@ -75,7 +83,6 @@ select {
 
 #itinerary-scroll {
   overflow: scroll;
-  max-width: 210px;
   max-height: 265px;
   background-color: #ddd;
   padding: 0 10px 0 10px;
@@ -120,3 +127,6 @@ select {
   margin-right: 10px;
   padding-top: 6px;
   color: #777; }
+
+#site-logo {
+  height: 27px; }

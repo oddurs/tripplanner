@@ -8,6 +8,18 @@ a {
   color: #00B7FF;
 }
 
+.navbar-inverse {
+	background:#736357;
+	border-color: darken(#736357, 10%);
+}
+.navbar-inverse .navbar-nav>.active>a {
+	background: darken(#736357, 10%);
+}
+
+.navbar-brand {
+	padding:10px 14px;
+}
+
 .upper-row {
 	margin-top: 15px;
 }
@@ -35,7 +47,6 @@ a {
 	width:25%;
 	float:right;
 	overflow: scroll;
-	background: lightgray;
 }
 
 ::-webkit-scrollbar {
@@ -43,7 +54,6 @@ a {
 }
 
 #shelf {
-	background-color:lightgray;
 	height:100%;
 	width:100%;
 	padding:30px;
@@ -53,7 +63,7 @@ a {
 	height:100vh;
 	max-width:100%;
 	margin:0;
-	background: lightgray;
+	background: #A8C9DD;
 }
 
 .options-inner {
@@ -92,7 +102,6 @@ select {
 
 #itinerary-scroll {
 	overflow:scroll;
-	max-width:210px;
 	max-height:265px;
 	background-color:#ddd;
 	padding:0 10px 0 10px;
@@ -113,7 +122,6 @@ select {
 	width: 14px;
 	height: 14px;
 	float:right;
-	visibility:hidden;
 
 	.glyphicon-minus {
 		top: -3px;
@@ -145,4 +153,8 @@ select {
 	margin-right:10px;
 	padding-top:6px;
 	color:#777;
+}
+
+#site-logo {
+	height:27px;
 }

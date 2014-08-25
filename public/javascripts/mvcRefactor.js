@@ -23,19 +23,17 @@ Day.prototype.removeActivity = function(type, id) {
 	console.log(this[type]);
 };
 
-Day.prototype.addMarker = function(type, id) {
-	var name,
-			locationLat,
-			locationLong;	
+Day.prototype.addDay = function () {
+	return new Day();
 };
 
 //
 // DayView
 //
 
-var DayView = function () {
+Day.prototype.dayView = function () {
 
-}
+};
 
 //
 // Activity
@@ -43,12 +41,12 @@ var DayView = function () {
 
 var Activity = function () {
 
-}
+};
 
 //
 // ActivityView
 //
 
-var ActivityView = function () {
+Activity.prototype.activityView = function () {
 
-}
+};

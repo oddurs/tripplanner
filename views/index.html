@@ -11,29 +11,29 @@
 					<h4>Options</h4>
 					<h5>Hotels</h5>
 					<select id="hotel-dropdown"></select> 
-					<button class="btn btn-xs btn-info" id="hotel-button"><span class="glyphicon glyphicon-plus"></span></button>
+					<button class="btn btn-xs btn-info" id="hotel-button" data-value="all_hotels"><span class="glyphicon glyphicon-plus"></span></button>
 
 					<h5>Restaurants</h5>
 					<select id="restaurant-dropdown"></select>
-					<button class="btn btn-xs btn-info" id="restaurant-button"><span class="glyphicon glyphicon-plus"></span></button>
+					<button class="btn btn-xs btn-info" id="restaurant-button" data-value="all_restaurants"><span class="glyphicon glyphicon-plus"></span></button>
 
 					<h5>Things To Do</h5>
 					<select id="thingsToDo-dropdown"></select>
-					<button class="btn btn-xs btn-info" id="todo-button"><span class="glyphicon glyphicon-plus"></span></button>
+					<button class="btn btn-xs btn-info" id="todo-button" data-value="all_things_to_do"><span class="glyphicon glyphicon-plus"></span></button>
 				</div>
 
 				<div class="itinerary-inner">
 					<h4>My Itinerary</h4>
 					<div id="itinerary-scroll">
-						<div class="itinerary-hotel">
+						<div class="itinerary-hotels">
 							<h5>My Hotel</h5>
 							<ul></ul>
 						</div>
-						<div class="itinerary-restaurant">
+						<div class="itinerary-restaurants">
 							<h5>My Restaurants</h5>
 							<ul></ul>
 						</div>
-						<div class="itinerary-todo">
+						<div class="itinerary-things_to_do">
 							<h5>My Things To Do</h5>
 							<ul></ul>
 						</div>
@@ -47,12 +47,18 @@
 
 <script>
  
+
 {% autoescape false %}
+var activities = {
+	hotels: {{ hotels | json }},
+	restaurants: {{ restaurants | json }},
+	all_things_to_do: {{ thingsToDo | json }}
+};
+
 var all_hotels = {{ hotels | json }};
 var all_restaurants = {{ restaurants | json }};
 var all_things_to_do = {{ thingsToDo | json }};
 {% endautoescape %}
-
 
 // TO BE DELETED
 

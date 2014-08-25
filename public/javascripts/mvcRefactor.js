@@ -1,54 +1,38 @@
-// 
-// Day
-// 
 
 var Day = function () {
 	this.hotels = [];
 	this.restaurants = [];
 	this.things_to_do = [];
+	this.markers = [];
 }
 
-// day1.addActivity("hotels", 123123);
-Day.prototype.addActivity = function(type, id) {
+Day.prototype.addActivity = function (id, type) {
+	// adds id to this.type
 	this[type].push(id);
-};
-
-Day.prototype.removeActivity = function(type, id) {
-	console.log(this[type]);
-	for (var i = 0; i < this[type].length; i++) {
-		if (this[type][i] === id) {
-			this[type].splice(i,1);
+	for(var i=0; i<activities[type].length; i++) {
+		var currentActivity = activities[type][i];
+		if(currentActivity._id === id) {
+			this.addMarker (currentActivity.place.location[0], currentActivity.place.location[1], currentActivity.name);
+			this.addToItinerary (currentActivity.name, type);
 		}
+		// updates DayView based off this.type
+			// adds marker based off this.type
+			// adds to itinerary based off this.type
 	}
-	console.log(this[type]);
 };
 
-Day.prototype.addMarker = function(type, id) {
-	var name,
-			locationLat,
-			locationLong;	
+Day.prototype.addMarker = function (lat, lon, name) {
+	var myLatLng = new google.maps.LatLng(lat, lon);
+	var marker = new google.maps.Marker({
+	    position: myLatLng,
+	    title: name
+	});
+
+	marker.setMap(map);
 };
 
-//
-// DayView
-//
-
-var DayView = function () {
-
-}
-
-//
-// Activity
-//
-
-var Activity = function () {
-
-}
-
-//
-// ActivityView
-//
-
-var ActivityView = function () {
-
+Day.prototype.addToItinerary = function (name, type) {
+	var newClass = ".itinerary-" + type;
+	$(newClass + ' ul') 
+	$('thisthing ul')
 }

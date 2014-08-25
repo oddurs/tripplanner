@@ -33,7 +33,7 @@ var restaurantSchema = new Schema({
 	cuisine: String,
 	// TODO: price should be integer between 1 and 5
 	price: Number
-})
+});
  
 Place = mongoose.model('Place', placeSchema);
 Hotel = mongoose.model('Hotel', hotelSchema);

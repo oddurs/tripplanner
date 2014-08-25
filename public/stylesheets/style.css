@@ -126,19 +126,21 @@ select {
     left: -6px; }
 
 .dayButton {
-  background-color: #444;
+  background-color: transparent;
   width: 30px;
   height: 30px;
   border-radius: 100%;
+  border: 2px solid #a8c9dd;
   margin: 5px;
-  color: white;
-  padding: 8px 5px 5px 11px;
+  color: #a8c9dd;
+  padding: 6px 0px 5px 9px;
   margin-top: 9px;
   font-size: 12px;
   cursor: pointer; }
 
 .dayButton.active {
-  background-color: #777; }
+  background: #a8c9dd;
+  color: #736357; }
 
 .days-label {
   font-size: 14px;

@@ -133,7 +133,8 @@ select {
   border: 2px solid #a8c9dd;
   margin: 5px;
   color: #a8c9dd;
-  padding: 6px 0px 5px 9px;
+  text-align: center;
+  padding-top: 6px;
   margin-top: 9px;
   font-size: 12px;
   cursor: pointer; }

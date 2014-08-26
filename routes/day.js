@@ -13,13 +13,24 @@ router.post('/', function (req, res) {
 	// res.redirect("./");
 });
 
-router.post('/:dayId/attractions', function (req, res) {
+router.post('/:day_number/attractions', function (req, res) {
+	var day_number = req.params.day_number;
+	var attractionId = req.body.attractionId;
+	var attractionType = req.body.attractionType;
+
+	models.Day.findOne({day_number: day_number}, function(err, day) {		
+		var newDay = day[attractionType];
+		newDay.push(attractionId);
+		day.save();
+	})
+
 
 });
 
 router.get('/', function (req, res) {
 	models.Day.find({}, 'day_number hotels restaurants thingsToDo', function (err, days) {
-		res.render('index', {'day_number': day_number})
+		res.render('index');
+		// res.send(days);
 	});
 });
 

@@ -1,8 +1,10 @@
 $('#addDayButton').click(function() {
+	// var self = this;
 	var currentDays = $('#daysCounter li').length - 2;
 	if(currentDays < 4) {
 		$('#addDayButton').before('<li class="dayButton" value="day' + (currentDays + 1) + '">' + (currentDays + 1) + '</li>');		
 	}
+	$.post("/days", {day_number: currentDays + 1});
 });
 
 $(document).on('click', '.dayButton', (function() {
@@ -48,3 +50,8 @@ var changePage = function(activeDay) {
 		}
 	}
 }
+
+$( document ).ready(function() {
+    var currentDays = $('#daysCounter li').length - 2;
+    $.post("/days", {day_number: currentDays});
+});

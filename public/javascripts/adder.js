@@ -5,7 +5,10 @@ $(document).ready(function() {
 		$('.itinerary-hotel ul').append('<li>' + newHotel.text() + '<button class="btn btn-xs btn-danger delete-button"><span class="glyphicon glyphicon-minus"></span></button>' + '</li>');
 		$('.itinerary-hotel').css('display', 'block');
 		$('#itinerary-scroll').css('border', '1px solid #bbb');
-		placeAPin(newHotel.val(), all_hotels);
+		// placeAPin(newHotel.val(), all_hotels);
+		var currentDay = $('.dayButton.active').text();
+		var hotelId = newHotel.attr("data-id");
+		$.post('/days/' + currentDay + '/attractions', {attractionId: hotelId, attractionType: "hotels"});
 	})
 	$('#restaurant-button').click(function() {
 		var newRestaurant = $('#restaurant-dropdown option:selected');
@@ -13,7 +16,10 @@ $(document).ready(function() {
 		$('.itinerary-restaurant ul').append('<li>' + newRestaurant.text() + '<button class="btn btn-xs btn-danger delete-button"><span class="glyphicon glyphicon-minus"></span></button>' + '</li>');
 		$('.itinerary-restaurant').css('display', 'block');
 		$('#itinerary-scroll').css('border', '1px solid #bbb');
-		placeAPin(newRestaurant.val(), all_restaurants);
+		// placeAPin(newRestaurant.val(), all_restaurants);
+		var currentDay = $('.dayButton.active').text();
+		var restaurantId = newRestaurant.attr("data-id");
+		$.post('/days/' + currentDay + '/attractions', {attractionId: restaurantId, attractionType: "restaurants"});
 	})
 	$('#todo-button').click(function() {
 		var newToDo = $('#thingsToDo-dropdown option:selected');
@@ -21,7 +27,10 @@ $(document).ready(function() {
 		$('.itinerary-todo ul').append('<li>' + newToDo.text() + '<button class="btn btn-xs btn-danger delete-button"><span class="glyphicon glyphicon-minus"></span></button>' + '</li>');
 		$('.itinerary-todo').css('display', 'block');
 		$('#itinerary-scroll').css('border', '1px solid #bbb');
-		placeAPin(newToDo.val(), all_things_to_do);
+		// placeAPin(newToDo.val(), all_things_to_do);
+		var currentDay = $('.dayButton.active').text();
+		var thingsToDoId = newToDo.attr("data-id");
+		$.post('/days/' + currentDay + '/attractions', {attractionId: thingsToDoId, attractionType: "thingsToDo"});
 	})
 })
 

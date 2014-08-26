@@ -5,13 +5,10 @@ var models = require('../models');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  models.Hotel.find(function(err, hotels) {
-  	models.Restaurant.find(function(err, restaurants) {
-  		models.ThingsToDo.find(function(err, thingsToDo) {
-		    res.render('index', { 'hotels': hotels, 'restaurants': restaurants, 'thingsToDo': thingsToDo});
-  		})
-  	})
-  });
+	models.Day.find(function(err, days) {
+		console.log(days[0].restaurants);
+		res.render('index', {days:days});
+	})
 });
 
 module.exports = router;

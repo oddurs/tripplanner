@@ -9,6 +9,7 @@
 			<div id="shelf">
 				<div class="options-inner">
 					<h4>Options</h4>
+					<p>{{days[0].restaurants}}</p>
 					<h5>Hotels</h5>
 					<select id="hotel-dropdown"></select> 
 					<button class="btn btn-xs btn-info" id="hotel-button"><span class="glyphicon glyphicon-plus"></span></button>
@@ -42,51 +43,4 @@
 			</div>
 		</div>
 	</div>
-
-
-
-<script>
- 
-{% autoescape false %}
-var all_hotels = {{ hotels | json }};
-var all_restaurants = {{ restaurants | json }};
-var all_things_to_do = {{ thingsToDo | json }};
-{% endautoescape %}
-
-
-// TO BE DELETED
-
-
-var day1 = {
-	hotels:[],
-	restaurants:[],
-	things_to_do:[]
-};
-
-var day2 = {
-	hotels:[],
-	restaurants:[],
-	things_to_do:[]
-};
-
-var day3 = {
-	hotels:[],
-	restaurants:[],
-	things_to_do:[]
-};
-
-var day4 = {
-	hotels:[],
-	restaurants:[],
-	things_to_do:[]
-};
-
-
-// /TO BE DELETED
-
-var activeDay = day1;
- 
-</script>
-
-
 {% endblock %}

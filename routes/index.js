@@ -14,4 +14,10 @@ router.get('/', function(req, res) {
   });
 });
 
+// router.get('/', function(req, res) {
+// 	models.Day.find(function(err, days) {
+// 		res.render('index', {'days':days});
+// 	})
+// })
+
 module.exports = router;

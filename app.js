@@ -9,6 +9,7 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var days = require('./routes/day');
 
 var app = express();
 app.engine('html', swig.renderFile);
@@ -36,6 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components', express.static(__dirname + '/bower_components'));
 app.use('/', routes);
 app.use('/users', users);
+app.use('/days', days)
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

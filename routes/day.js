@@ -9,7 +9,7 @@ router.post('/', function (req, res) {
 	});
 
 	newDay.save();
-	res.send(200,"It worked!");
+	res.json(newDay);
 	// res.redirect("./");
 });
 
@@ -18,13 +18,19 @@ router.post('/:day_number/attractions', function (req, res) {
 	var attractionId = req.body.attractionId;
 	var attractionType = req.body.attractionType;
 
-	models.Day.findOne({day_number: day_number}, function(err, day) {		
+	models.Day.findOne({_id: day_number}, function(err, day) {		
 		var newDay = day[attractionType];
 		newDay.push(attractionId);
 		day.save();
 	})
 
 
+});
+
+router.get('/dayid/:dayid', function (req, res) {
+	models.Day.findOne({"day_number": req.params.dayid}, function (err, days) {
+		res.send(days.id);
+	});
 });
 
 router.get('/', function (req, res) {
